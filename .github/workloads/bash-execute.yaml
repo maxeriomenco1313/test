@@ -1,0 +1,14 @@
+name: Run simple bash script
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  run-bash:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run bash script
+        run: |  
+          chmod +x info.sh
+          ./info.sh
